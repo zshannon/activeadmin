@@ -247,8 +247,9 @@ describe ActiveAdmin::FormBuilder do
     it "should generate a nested text input once" do
       expect(body.scan("post_author_attributes_first_name_input").size).to eq(1)
     end
-    it "should add an author first name field" do
+    it "should add author first and last name fields" do
       expect(body).to have_tag("input", attributes: { name: "post[author_attributes][first_name]"})
+      expect(body).to have_tag("input", attributes: { name: "post[author_attributes][last_name]"})
     end
   end
 
@@ -261,6 +262,26 @@ describe ActiveAdmin::FormBuilder do
     end
   end
 
+  context "with inputs twice" do
+    let :body do
+      build_form do |f|
+        f.inputs do
+          f.input :title
+          f.input :body
+        end
+        f.inputs do
+          f.input :author
+          f.input :published_at
+        end
+      end
+    end
+    it "should render four inputs" do
+      expect(body.scan(/<input/).size).to eq(2) # utf8, title
+      expect(body.scan(/<textare/).size).to eq(1) # body
+      expect(body.scan(/<select/).size).to eq(6) # author, published at
+    end
+  end
+
   context "with has many inputs" do
     describe "with simple block" do
       let :body do
@@ -270,6 +291,7 @@ describe ActiveAdmin::FormBuilder do
             p.input :title
             p.input :body
           end
+          f.inputs
         end
       end
 
@@ -303,6 +325,7 @@ describe ActiveAdmin::FormBuilder do
 
       it "should render the nested form" do
         expect(body).to have_tag("input", attributes: {name: "category[posts_attributes][0][title]"})
+        expect(body).to have_tag("textarea", attributes: {name: "category[posts_attributes][0][body]"})
       end
 
       it "should add a link to remove new nested records" do
