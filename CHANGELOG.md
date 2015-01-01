@@ -1,11 +1,14 @@
 ## 1.0.0 [☰](https://github.com/activeadmin/activeadmin/compare/v0.6.3...master) (unreleased)
 
 ### Major Changes
+
 * Migration from Metasearch to Ransack [#1979][] by [@seanlinsley][]
 * Rails 4 support [#2326][] by many people :heart:
 
 ### Enhancements
-* Allow Arbre to be used inside ActiveAdmin forms [#3486][] by [@varyonic]
+
+* Column block on table index is now sortable by default [#3075][] by [@dmitry][]
+* Allow Arbre to be used inside ActiveAdmin forms [#3486][] by [@varyonic][]
 * Make AA ORM-agnostic [#2545][] by [@johnnyshields][]
 * Add multi-record support to `attributes_table_for` [#2544][] by [@zorab47][]
 * Table CSS classes are now prefixed to prevent clashes [#2532][] by [@TimPetricola][]
@@ -967,6 +970,8 @@ of the highlights. 250 commits. Enough said.
 [#2601]: https://github.com/activeadmin/activeadmin/issues/2601
 [#2744]: https://github.com/activeadmin/activeadmin/issues/2744
 [#2847]: https://github.com/activeadmin/activeadmin/issues/2847
+[#3075]: https://github.com/activeadmin/activeadmin/issues/3075
+[#3486]: https://github.com/activeadmin/activeadmin/issues/3486
 [@Bishop]: https://github.com/Bishop
 [@BoboFraggins]: https://github.com/BoboFraggins
 [@DMajrekar]: https://github.com/DMajrekar
@@ -991,6 +996,7 @@ of the highlights. 250 commits. Enough said.
 [@developer88]: https://github.com/developer88
 [@dhiemstra]: https://github.com/dhiemstra
 [@dmfrancisco]: https://github.com/dmfrancisco
+[@dmitry]: https://github.com/dmitry
 [@doug316]: https://github.com/doug316
 [@ebeigarts]: https://github.com/ebeigarts
 [@ejholmes]: https://github.com/ejholmes
@@ -1068,6 +1074,7 @@ of the highlights. 250 commits. Enough said.
 [@vairix]: https://github.com/vairix
 [@vairix-ssierra]: https://github.com/vairix-ssierra
 [@valdemarua]: https://github.com/valdemarua
+[@varyonic]: https://github.com/varyonic
 [@watson]: https://github.com/watson
 [@whatcould]: https://github.com/whatcould
 [@yawn]: https://github.com/yawn
