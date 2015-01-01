@@ -67,11 +67,14 @@ module ActiveAdmin
     # The namespace root.
     inheritable_setting :root_to, 'dashboard#index'
 
+    # Options that a passed to root_to.
+    inheritable_setting :root_to_options, {}
+
     # Display breadcrumbs
     inheritable_setting :breadcrumb, true
 
     # Default CSV options
-    inheritable_setting :csv_options, {col_sep: ','}
+    inheritable_setting :csv_options, { col_sep: ',', byte_order_mark: "\xEF\xBB\xBF" }
 
     # Default Download Links options
     inheritable_setting :download_links, true
