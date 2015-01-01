@@ -7,6 +7,8 @@
 
 ### Enhancements
 
+* Unify DSL for index `actions` and `actions dropdown: true` [#3463][] by [@timoschilling][]
+* Add DSL method `includes` for `ActiveRecord::Relation#includes` [#3464][] by [@timoschilling][]
 * Column block on table index is now sortable by default [#3075][] by [@dmitry][]
 * Allow Arbre to be used inside ActiveAdmin forms [#3486][] by [@varyonic][]
 * Make AA ORM-agnostic [#2545][] by [@johnnyshields][]
@@ -224,7 +226,7 @@ index download_links: ->{ can?(:view_all_download_links) || [:pdf] }
 * Developer can pass options for CSV generation. [#1626][] by [@rheaton][]
 ```ruby
     ActiveAdmin.register Post do
-      csv options: {force_quotes: true} do
+      csv options: { force_quotes: true } do
         column :title
       end
     end
@@ -971,6 +973,8 @@ of the highlights. 250 commits. Enough said.
 [#2744]: https://github.com/activeadmin/activeadmin/issues/2744
 [#2847]: https://github.com/activeadmin/activeadmin/issues/2847
 [#3075]: https://github.com/activeadmin/activeadmin/issues/3075
+[#3463]: https://github.com/activeadmin/activeadmin/issues/3463
+[#3464]: https://github.com/activeadmin/activeadmin/issues/3464
 [#3486]: https://github.com/activeadmin/activeadmin/issues/3486
 [@Bishop]: https://github.com/Bishop
 [@BoboFraggins]: https://github.com/BoboFraggins
@@ -1067,6 +1071,7 @@ of the highlights. 250 commits. Enough said.
 [@sunny]: https://github.com/sunny
 [@tank-bohr]: https://github.com/tank-bohr
 [@teoulas]: https://github.com/teoulas
+[@timoschilling]: https://github.com/timoschilling
 [@tinynumbers]: https://github.com/tinynumbers
 [@tracedwax]: https://github.com/tracedwax
 [@tricknotes]: https://github.com/tricknotes
