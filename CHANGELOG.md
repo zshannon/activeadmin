@@ -16,6 +16,7 @@
 
 * Add better support for rendering lists. [#5370] by [@dkniffin]
 * Undeprecate `config.register_stylesheet` and `config.register_javascript` for lack of better solution for including external assets. It might be reevaluated in the future. [#5662] by [@deivid-rodriguez]
+* Render a text filter instead of a select for large associations [#5548] by [@DanielHeath]
 
 ### Security Fixes
 
@@ -410,6 +411,7 @@ Please check [0-6-stable] for previous changes.
 [#5650]: https://github.com/activeadmin/activeadmin/pull/5650
 [#5590]: https://github.com/activeadmin/activeadmin/pull/5590
 [#5662]: https://github.com/activeadmin/activeadmin/pull/5662
+[#5548]: https://github.com/activeadmin/activeadmin/pull/5548
 
 [@5t111111]: https://github.com/5t111111
 [@aarek]: https://github.com/aarek
