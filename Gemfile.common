@@ -9,6 +9,7 @@ gem 'pundit'
 gem 'jruby-openssl', '~> 0.10.1', platform: :jruby
 gem 'draper', '~> 3.0'
 gem "devise", '~> 4.6'
+gem 'sqlite3', platform: :mri
 
 group :test do
   gem 'capybara', '~> 3.14'
@@ -23,6 +24,5 @@ group :test do
   gem 'parallel_tests', '~> 2.26'
   gem 'rails-i18n' # Provides default i18n for many languages
   gem 'rspec-rails'
-  gem 'sqlite3', platform: :mri
   gem 'selenium-webdriver'
 end
