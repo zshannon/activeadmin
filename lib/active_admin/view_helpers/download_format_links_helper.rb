@@ -20,7 +20,11 @@ module ActiveAdmin
         div class: "download_links" do
           span I18n.t('active_admin.download')
           formats.each do |format|
-            a format.upcase, href: url_for(params: params, format: format)
+            if format.is_a? Array
+              a *format
+            else
+              a format.upcase, href: url_for(params: params, format: format)
+            end
           end
         end
       end
